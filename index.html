@@ -9,6 +9,14 @@
 </head>
 <style>
     @media (max-width: 768px) {
+        .hero {
+            margin-top: 56px;
+        }
+
+        .sidebar {
+            width: 50%;
+        }
+
         .feature .border {
             padding: 1.5rem !important;
         }
@@ -39,7 +47,6 @@
             margin: 10px 0 10px 0;
         }
 
-
     }
 
     @media (max-width: 576px) {
@@ -54,6 +61,8 @@
         .feature p {
             font-size: 0.9rem;
         }
+
+
     }
 
     .hero {
@@ -63,8 +72,20 @@
         /* White text for contrast */
     }
 
+    .hero {
+        margin-top: 56px;
+    }
+
+    .left {
+        background: linear-gradient(to left, #2c2c2c, #424242);
+        /* Dark gray to black */
+        color: white;
+
+    }
+
     .blur-bg {
         background: rgba(255, 255, 255, 0.2);
+
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 10px;
@@ -76,23 +97,34 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-        <a class="navbar-brand" href="#">MyPortfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    <div class="offcanvas offcanvas-start sidebar" data-bs-scroll="true" tabindex="-1" id="offcanvasSidebar"
+        aria-labelledby="offcanvasSidebarLabel">
+        <div class="offcanvas-header left">
+            <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Menu</h5>
+            <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close "></button>
+        </div>
+        <div class="offcanvas-body left">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-light" href="index.html"> Home</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="about.html"> About</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="contact.html"> Contact</a></li>
             </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid justify-content-between">
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                ☰ Menu
+            </button>
+            <a class="navbar-brand" href="#">MyPortfolio</a>
+
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="height:85vh">
-        <section class="text-center py-1 main">
+    <section class="hero" style="height:86vh">
+        <section class="text-center py-10 main">
             <div class="container heading">
                 <h1 class="display-4 text-light">Welcome to My Portfolio</h1>
                 <p class="lead text-light">Building clean and responsive websites with passion.</p>
@@ -127,6 +159,7 @@
             </div>
         </section>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3 fotter">
