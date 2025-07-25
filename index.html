@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    @media (max-width: 768px) {
+        .feature .border {
+            padding: 1.5rem !important;
+        }
+
+
+
+        .main {
+            padding: none;
+        }
+
+
+
+        .feature h5 {
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+        }
+
+
+        .heading h1,
+        .heading p {
+            font-size: 21px
+        }
+
+        .box {
+            margin: 10px 0 10px 0;
+        }
+
+
+    }
+
+    @media (max-width: 576px) {
+        .feature .border {
+            padding: 1.2rem !important;
+        }
+
+        .feature h5 {
+            font-size: 1rem;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .hero {
+        background: linear-gradient(to right, #2c2c2c, #000000);
+        /* Dark gray to black */
+        color: white;
+        /* White text for contrast */
+    }
+
+    .blur-bg {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+    }
+</style>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand" href="#">MyPortfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height:85vh">
+        <section class="text-center py-1 main">
+            <div class="container heading">
+                <h1 class="display-4 text-light">Welcome to My Portfolio</h1>
+                <p class="lead text-light">Building clean and responsive websites with passion.</p>
+            </div>
+        </section>
+
+        <!-- Feature Area -->
+        <section class="py-1 feature">
+            <div class="container box">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="border p-4 rounded shadow-sm blur-bg">
+                            <h5 class="text-light">Web Development</h5>
+                            <p class="text-light">I create responsive and scalable websites using HTML, CSS, JavaScript,
+                                and Bootstrap.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border p-4 rounded shadow-sm blur-bg">
+                            <h5 class="text-light">Backend Services</h5>
+                            <p class="text-light">Node.js and MySQL-based robust backend APIs for your projects.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border p-4 rounded shadow-sm blur-bg">
+                            <h5 class="text-light ">UI/UX Design</h5>
+                            <p class="text-light">Simple, clean, and user-focused design using Figma and Bootstrap
+                                utilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 fotter">
+        <div class="container">
+            <p class="mb-0 text-light">&copy; 2025 MyPortfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
